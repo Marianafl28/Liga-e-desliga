@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga e desliga</title>
+    <link rel="stylesheet" href="css/liga.css">
+</head>
+<body>
+    <div class="button">
+        <div class="toggle">
+            <input type="checkbox">
+        </div>
+        <div class="text"></div>
+    </div>
+
+   
+    <script>//for change text (Unchecked to checked) on click
+        document.querySelector('.toggle').addEventListener('click', function(){
+          document.querySelector('.text').classList.toggle('check');
+        });
+      </script>
+
+    </script>
+</body>
+</html>

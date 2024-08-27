@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: nome;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #dde1e7;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    background: #dde1e7;
+    border-radius: 5px;
+    box-shadow:  -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.button .toggle{
+    height: 40px;
+    width: 100px;
+}
+
+.toggle input{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #dde1e7; 
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow:  -8px -4px 8px 0px #ffffff73, 8px 4px 12px 0px rgba(94, 104, 121, 0.288),
+    inset -4px -4px 4px 0px #ffffff73,
+    inset 4px 4px 4px 0px rgba(94, 104, 121, 0.288);
+}
+
+.toggle input:before{
+    position: absolute;
+    content: '';
+    left:0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background:#dde1e7;
+    border-radius: 50%;
+    box-shadow:  -8px -4px 8px 0px #ffffff73, 8px 4px 12px 0px rgba(94, 104, 121, 0.288);
+transition: left 0.4s cubic-bezier(0.85,0.05,0.18,1,35);
+}
+
+input:checked::before{
+left: 60px;
+box-shadow:  -8px -4px 8px 0px #ffffff73, 8px 4px 12px 0px rgba(94, 104, 121, 0.288);
+}
+
+.text:before{
+    position: relative;
+    content: 'Unchecked';
+    margin-left: 20px;
+    font-size: 20px;
+    color: #a6a6a6;
+    letter-spacing: 1px;
+    float: right;
+    width: 112px;
+}
+
+.text.check:before{
+    content: 'Checked';
+    color: #3498db;
+}
+
